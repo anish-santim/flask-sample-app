@@ -21,13 +21,13 @@ class FlaskappTests(unittest.TestCase):
 
     def test_addusers_status_code(self): 
         result = self.app.post('/api/v1/users', 
-                               data='{"username": "prashu12", "email":"prashutest@gmail.com", "password": "prashu123"}',
+                               data='{"username": "abc12", "email":"abctest@gmail.com", "password": "abc123"}',
                                content_type='application/json') 
         self.assertEquals(result.status_code, 201) 
 
     def test_addtweets_status_code(self): 
         result = self.app.post('/api/v2/tweets', 
-                               data='{"username": "prashu12", "body":"Wow! Is it working #testing"}', 
+                               data='{"username": "abc12", "body":"Wow! Is it working #testing"}', 
                                content_type='application/json') 
         self.assertEqual(result.status_code, 201) 
 
